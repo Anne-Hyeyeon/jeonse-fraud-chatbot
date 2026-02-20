@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback, useMemo } from "react"
-import { Send } from "lucide-react"
+import { ArrowUp } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -44,13 +44,13 @@ export const ChatInput = ({ onSend, disabled }: IChatInputProps) => {
   )
 
   return (
-    <footer className="sticky bottom-0 z-10 border-t border-neutral-200/60 bg-white/70 px-4 py-3 backdrop-blur-xl sm:px-6">
+    <footer className="sticky bottom-0 z-10 border-t border-neutral-200/60 bg-white/70 px-3 py-2.5 backdrop-blur-xl sm:px-5">
       <form
         onSubmit={(e) => {
           e.preventDefault()
           handleSubmit()
         }}
-        className="mx-auto flex max-w-3xl items-end gap-3"
+        className="flex items-end gap-2 sm:gap-3"
       >
         <label htmlFor="chat-input" className="sr-only">
           메시지 입력
@@ -63,17 +63,17 @@ export const ChatInput = ({ onSend, disabled }: IChatInputProps) => {
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           disabled={disabled}
-          className="min-h-[44px] max-h-32 flex-1 resize-none rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-[15px] placeholder:text-neutral-400 focus:border-[#FF6B6B]/50 focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]/20 disabled:opacity-50"
+          className="min-h-[44px] max-h-32 flex-1 resize-none rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm placeholder:text-neutral-400 focus:border-[#2563EB]/40 focus:outline-none focus:ring-2 focus:ring-[#2563EB]/15 disabled:opacity-50 sm:text-[15px]"
           aria-label="채팅 메시지 입력"
         />
         <Button
           type="submit"
           size="icon"
           disabled={disabled || !value.trim()}
-          className="size-11 shrink-0 rounded-full bg-[#FF6B6B] text-white shadow-md transition-all hover:bg-[#FF5252] hover:shadow-lg disabled:opacity-40"
+          className="size-10 shrink-0 rounded-full bg-[#2563EB] text-white shadow-md transition-all hover:bg-[#1D4ED8] hover:shadow-lg disabled:opacity-40 sm:size-11"
           aria-label="메시지 전송"
         >
-          <Send className="size-5" />
+          <ArrowUp className="size-5" />
         </Button>
       </form>
     </footer>

@@ -21,7 +21,7 @@ export const ChatWindow = ({ messages, isLoading }: IChatWindowProps) => {
 
   return (
     <ScrollArea className="flex-1 overflow-y-auto">
-      <div className="flex flex-col gap-4 py-6" role="log" aria-label="채팅 메시지">
+      <div className="flex flex-col gap-3 py-4 sm:gap-4 sm:py-6" role="log" aria-label="채팅 메시지">
         {messages.map((message) => (
           <MessageBubble key={message.id} message={message} />
         ))}
