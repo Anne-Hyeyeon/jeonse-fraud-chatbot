@@ -17,9 +17,9 @@ export const MessageBubble = ({ message }: IMessageBubbleProps) => {
     >
       <div
         className={cn(
-          "max-w-[85%] whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm leading-relaxed sm:max-w-[70%] sm:px-5 sm:py-3.5 sm:text-[15px]",
+          "max-w-5/6 whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm leading-relaxed sm:max-w-3/4 sm:px-5 sm:py-3.5 sm:text-base",
           isUser
-            ? "rounded-br-md bg-[#2D2D2D] text-white"
+            ? "rounded-br-md bg-neutral-800 text-white"
             : "rounded-bl-md bg-white text-neutral-800 shadow-sm",
         )}
       >

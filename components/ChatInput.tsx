@@ -6,13 +6,13 @@ import { Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const PLACEHOLDERS = [
-  "보증금 돌려받는 법 알려주세요…",
-  "집주인이 잠수탔어요 어떡하죠…",
-  "전세사기 당한 것 같은데요…",
-  "내 보증금은 어디로 간 걸까요…",
-  "임차권등기명령이 뭔가요…",
-  "여기에 억울한 사연을 풀어놓으세요…",
-]
+  "궁금한 점을 질문해 주세요",
+  "전세사기 피해 지원제도가 궁금해요",
+  "피해자 인정 절차를 알고 싶어요",
+  "긴급 주거지원 신청은 어떻게 하나요?",
+  "경공매 유예 신청 방법이 궁금해요",
+  "필요한 제출서류를 알려주세요",
+];
 
 interface IChatInputProps {
   onSend: (message: string) => void
@@ -63,14 +63,14 @@ export const ChatInput = ({ onSend, disabled }: IChatInputProps) => {
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           disabled={disabled}
-          className="min-h-[44px] max-h-32 flex-1 resize-none rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm placeholder:text-neutral-400 focus:border-[#FF6B6B]/50 focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]/20 disabled:opacity-50 sm:text-[15px]"
+          className="min-h-11 max-h-32 flex-1 resize-none rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm placeholder:text-neutral-400 focus:border-red-400/50 focus:outline-none focus:ring-2 focus:ring-red-400/20 disabled:opacity-50 sm:text-base"
           aria-label="채팅 메시지 입력"
         />
         <Button
           type="submit"
           size="icon"
           disabled={disabled || !value.trim()}
-          className="size-10 shrink-0 rounded-full bg-[#FF6B6B] text-white shadow-md transition-all hover:bg-[#FF5252] hover:shadow-lg disabled:opacity-40 sm:size-11"
+          className="size-10 shrink-0 rounded-full bg-red-400 text-white shadow-md transition-all hover:bg-red-500 hover:shadow-lg disabled:opacity-40 sm:size-11"
           aria-label="메시지 전송"
         >
           <Send className="size-5" />
