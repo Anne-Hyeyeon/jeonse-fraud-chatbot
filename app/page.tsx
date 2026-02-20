@@ -20,7 +20,7 @@ const ChatPage = () => {
             전세사기 피해 상담 챗봇
           </h1>
           <p className="text-xs text-neutral-500">
-            법률·제도 안내 서비스
+            보증금 지키미 🛡️
           </p>
         </div>
       </header>
@@ -30,6 +30,10 @@ const ChatPage = () => {
       </main>
 
       <ChatInput onSend={sendMessage} disabled={isLoading} />
+
+      <div className="border-t border-neutral-200/60 bg-white/60 py-2 text-center text-[11px] text-neutral-400 backdrop-blur-sm">
+        made by 김첨지
+      </div>
     </div>
   )
 }
